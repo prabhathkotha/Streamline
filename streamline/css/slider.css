@@ -1,0 +1,84 @@
+/*
+Original CSS by Ben Szabo [https://codepen.io/finnhvman]
+Adapted for Streamline 2019
+*/
+
+.pure-material-slider {
+  --pure-material-safari-helper1: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.04);
+  --pure-material-safari-helper2: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.12);
+  --pure-material-safari-helper3: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.16);
+  --pure-material-safari-helper4: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.24);
+  display: inline-block;
+  width: 200px;
+  line-height: 1.5;
+}
+
+/* Input */
+.pure-material-slider > input {
+  -webkit-appearance: none;
+  position: relative;
+  top: 24px;
+  display: block;
+  margin: 0 0 -36px;
+  width: 100%;
+  height: 36px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Without Span */
+.pure-material-slider > input:last-child {
+  position: static;
+  margin: 0;
+}
+
+.pure-material-slider > input:disabled + span {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+}
+
+.pure-material-slider > input::-webkit-slider-runnable-track {
+  margin: 17px 0;
+  border-radius: 1px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 0.24);
+}
+
+.pure-material-slider > input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 50%;
+  height: 2px;
+  width: 2px;
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  transform: scale(6, 6);
+  transition: box-shadow 0.2s;
+}
+
+.pure-material-slider:hover > input::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px var(--pure-material-safari-helper1);
+}
+
+.pure-material-slider > input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px var(--pure-material-safari-helper2);
+}
+
+.pure-material-slider:hover > input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px var(--pure-material-safari-helper3);
+}
+
+.pure-material-slider > input:active::-webkit-slider-thumb {
+   box-shadow: 0 0 0 2px var(--pure-material-safari-helper4) !important;
+}
+
+.pure-material-slider > input:disabled::-webkit-slider-runnable-track {
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+}
+
+.pure-material-slider > input:disabled::-webkit-slider-thumb {
+  background-color: rgb(var(--pure-material-onsurface-rgb, 0, 0, 0));
+  color: rgb(var(--pure-material-surface-rgb, 255, 255, 255)); /* Safari */
+  box-shadow: 0 0 0 1px rgb(var(--pure-material-surface-rgb, 255, 255, 255)) !important;
+  transform: scale(4, 4);
+}
