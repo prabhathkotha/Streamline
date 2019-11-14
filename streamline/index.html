@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 	<link rel="stylesheet" href="css/slider.css">
 	<script src="https://kit.fontawesome.com/8edcd118e3.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
 		<div class="hero-body ">
 			<div class="container has-text-centered">
-				<button class="button is-large is-primary is-outlined is-inverted is-medium">
+				<button class="button is-large is-primary is-outlined is-inverted is-medium" id="start">
 					Streamline
 				</button>
 				<p class="subtitle">
@@ -35,19 +36,18 @@
 		</div>
 	</section>
 
-	<section class="section" id="survey" style="display:none">
+	<section class="section has-background-light" id="survey" style="display:none">
 		<div class="container">
-			<h1 class="title">Movie vs Show</h1>
+			<h1 class="title">Style</h1>
 			<div class="columns is-centered">
 				<div class="column is-half">
 					<h2 class="subtitle">
-						It's Saturday afternoon. Are you more likely to get cozy for a <strong>feature film</strong> or
-						a
-						<strong>show</strong>?
+						It's Saturday afternoon. Are you more likely to get cozy for a <strong>movie</strong> or
+						a <strong>show</strong>?
 					</h2>
 					<img src="img/movie.png" style="width:auto; height:3em;">
 					<label class="pure-material-slider">
-						<input type="range" min="0" max="100">
+						<input type="range" min="0" max="100" id="type">
 					</label>
 					<img src="img/show.png" style="width:auto; height:3em;">
 				</div>
@@ -63,7 +63,7 @@
 					</h2>
 					<img src="img/slow.png" style="width:auto; height:3em;">
 					<label class="pure-material-slider">
-						<input type="range" min="0" max="100">
+						<input type="range" min="0" max="100" id="duration">
 					</label>
 					<img src="img/fast.png" style="width:auto; height:3em;">
 				</div>
@@ -77,13 +77,13 @@
 						Are you more likely to find your favorite titles at the local AMC or at a niche film-festival?
 					</h2>
 					<div class="buttons has-addons">
-						<button class="button is-primary">
+						<button class="button is-primary" id="blockbuster">
 							<span class="icon is-small">
 								<i class="fas fa-ticket-alt"></i>
 							</span>
 							<span>Blockbusters</span>
 						</button>
-						<button class="button is-link">
+						<button class="button is-link" id="niche">
 							<span class="icon is-small">
 								<i class="fas fa-film"></i>
 							</span>
@@ -94,20 +94,20 @@
 			</div>
 		</div>
 		<div class="container">
-				<h1 class="title">Decade</h1>
-				<div class="columns is-centered">
-					<div class="column is-half">
-						<h2 class="subtitle">
-							Do you prefer <strong>older content</strong> or <strong>fresh finds</strong>?
-						</h2>
-						<img src="img/old.png" style="width:auto; height:3em;">
-						<label class="pure-material-slider">
-							<input type="range" min="0" max="100">
-						</label>
-						<img src="img/new.png" style="width:auto; height:3em;">
-					</div>
+			<h1 class="title">Decade</h1>
+			<div class="columns is-centered">
+				<div class="column is-half">
+					<h2 class="subtitle">
+						Do you prefer <strong>older content</strong> or <strong>fresh finds</strong>?
+					</h2>
+					<img src="img/old.png" style="width:auto; height:3em;">
+					<label class="pure-material-slider">
+						<input type="range" min="0" max="100" id="decade">
+					</label>
+					<img src="img/new.png" style="width:auto; height:3em;">
 				</div>
 			</div>
+		</div>
 		<div class="container">
 			<h1 class="title">Content Rating</h1>
 			<div class="columns is-centered">
@@ -117,19 +117,19 @@
 						often.
 					</h2>
 					<div class="buttons has-addons">
-						<button class="button is-success">
+						<button class="button is-success" id="child">
 							<span class="icon is-small">
 								<i class="fas fa-baby"></i>
 							</span>
 							<span>Child-Friendly</span>
 						</button>
-						<button class="button is-warning">
+						<button class="button is-warning" id="parental">
 							<span class="icon is-small">
 								<i class="fas fa-child"></i>
 							</span>
 							<span>Parental Guidence</span>
 						</button>
-						<button class="button is-danger">
+						<button class="button is-danger" id="adult">
 							<span class="icon is-small">
 								<i class="fas fa-exclamation"></i>
 							</span>
@@ -137,6 +137,9 @@
 						</button>
 					</div>
 				</div>
+			</div>
+			<div class="container">
+				<button class="button is-large is-primary" id="done">Done!</button>
 			</div>
 	</section>
 
@@ -155,11 +158,11 @@
 					<div class="card">
 						<div class="card-image">
 							<figure class="image is-4by3">
-								<img src="img/creed.jpg">
+								<img src="img/creed.jpg" id="suggestion-1-pic">
 							</figure>
 						</div>
 						<div class="card-content">
-							<div class="content">
+							<div class="content" id="suggestion-1-desc">
 								INSERT CREED DESCRIPTION HERE.
 							</div>
 						</div>
@@ -169,11 +172,11 @@
 					<div class="card">
 						<div class="card-image">
 							<figure class="image is-4by3">
-								<img src="img/blade_runner.jpg">
+								<img src="img/blade_runner.jpg" id="suggestion-2-pic">
 							</figure>
 						</div>
 						<div class="card-content">
-							<div class="content">
+							<div class="content" id="suggestion-2-desc">
 								INSERT BLADE RUNNER DESCRIPTION HERE.
 							</div>
 						</div>
@@ -183,11 +186,11 @@
 					<div class="card">
 						<div class="card-image">
 							<figure class="image is-4by3">
-								<img src="img/joker.jpg">
+								<img src="img/joker.jpg" id="suggestion-3-pic">
 							</figure>
 						</div>
 						<div class="card-content">
-							<div class="content">
+							<div class="content" id="suggestion-3-desc">
 								INSERT JOKER DESCRIPTION HERE.
 							</div>
 						</div>
@@ -199,5 +202,6 @@
 		</div>
 	</section>
 </body>
+<script src="js/index.js"></script>
 
 </html>
