@@ -23,6 +23,7 @@ const recommendPlatform = async function(type, duration, popularity, decade, rat
         // ratings:
     /** request report_cards */
     let report_card = await $.get('../report_card/reportCards.json', (data) => {}, 'json');
+    console.log(report_card);
     let score = {};
     let maxShow = 0;
     let maxMovie = 0;
@@ -39,16 +40,17 @@ const recommendPlatform = async function(type, duration, popularity, decade, rat
         score[provider] = 0;
         score[provider] += 0.2 * ((report_card[i].movies.avgPopularity / maxMovie) * (1 - type/100) 
                                 + (report_card[i].shows.avgPopularity / maxShow) * (type/100));
+                                
         // runtime needs to be broken into buckets. for now, they are similar so all get full marks
         score[provider] += 0.2
         // ratio of movies within past year
         let newMovies = report_card[i].movies.yearDistr['2019'] / report_card[i].movies.count;
         let newShows = report_card[i].shows.yearDistr['2019'] / report_card[i].shows.count;
-        newMovies = newMovies != undefined ? newMovies : 0; // in case a service has 0 new content
-        newShows = newShows != undefined ? newShows : 0; // in case a service has 0 new movies
+        newMovies = newMovies != NaN ? newMovies : 0; // in case a service has 0 new content
+        newShows = newShows != NaN ? newShows : 0; // in case a service has 0 new movies
         let weightedNewness = (newMovies * (1 - type/100)) + (newShows * (type/100));
         score[provider] += 0.2 * ( 1 - Math.abs(weightedNewness  - (decade / 100) )); // percentage closeness to newness preference
-
+        
     }
     let match = '';
     let matchScore = 0;
@@ -60,5 +62,13 @@ const recommendPlatform = async function(type, duration, popularity, decade, rat
             matchScore = score[x];
         }
     }
-    return {'platform': match, suggestions: []};
+    let media = $.get(
+        `https://casecomp.konnectrv.io/${type < 50 ? 'show' : 'movie'}?platform=${match}`,
+    );
+
+    let returner = media.then(movies => {
+        // console.log(movies);
+        return {'platform': match, suggestions: [movies[0].imdb, movies[1].imdb, movies[2].imdb]};
+    });
+    return await returner;
 };
