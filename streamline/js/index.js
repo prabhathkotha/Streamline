@@ -13,25 +13,16 @@ $("#start").click(function () {
 });
 
 let popularity = "";
-$("#blockbuster").click(function() {
-     popularity = "blockbuster";
+$("#blockbuster, #niche").click(function() {
+     popularity = $(this).attr("id");
 });
-$("#niche").click(function() {
-    popularity = "niche";
-});
+
 let rating = "";
-$("#child").click(function() {
-    rating = "child";
-});
-$("#parental").click(function() {
-    rating = "parental";
-});
-$("#adult").click(function() {
-    rating = "adult";
+$("#child, #parental, #adult").click(function() {
+    rating = $(this).attr("id");
 });
 
 let stream_service = "";
-
 $("#done").click(function() {
     let recommendation = getStreamingProvider(
         $("#type").val(),
@@ -42,7 +33,6 @@ $("#done").click(function() {
     );
 
     //display movies based on imdb ids in recommendation
-    recommendation = [] //debugging. remove this line. ---------
     recommendation.forEach(function(imdb_id, i) {
         let image_url = null;//TODO get url using omdb and imdb_id
         let image_desc = null;//TODO get desc using omdb and imdb_id

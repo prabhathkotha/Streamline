@@ -12,6 +12,9 @@
     "url": "git+https://github.com/RedVentures22/unc-tech-case-competition-2019-streamline.git"
   },
   "author": "Jacob Smith",
+  "contributors": [
+    "Prabhath Kotha"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RedVentures22/unc-tech-case-competition-2019-streamline/issues"

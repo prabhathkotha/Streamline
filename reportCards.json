@@ -1,4 +1,195 @@
 {
+    "amazon_prime": {
+        "movies": {
+            "count": 50,
+            "avgPopularity": 16.217519999999997,
+            "avgScore": 6.846,
+            "avgRuntime": 115.14,
+            "ratingDistr": {
+                "PG": 3,
+                "R": 37,
+                "PG-13": 8,
+                "Not Rated": 2
+            },
+            "yearDistr": {
+                "1957": 1,
+                "1968": 1,
+                "1976": 2,
+                "1980": 1,
+                "1982": 1,
+                "1984": 2,
+                "1988": 2,
+                "1989": 1,
+                "1990": 1,
+                "1991": 1,
+                "1995": 2,
+                "1997": 1,
+                "2000": 2,
+                "2001": 1,
+                "2002": 1,
+                "2010": 3,
+                "2015": 1,
+                "2016": 1,
+                "2017": 12,
+                "2018": 9,
+                "2019": 4
+            },
+            "genres": {
+                "Adventure": 9,
+                "Family": 1,
+                "Fantasy": 2,
+                "Action": 10,
+                "Thriller": 18,
+                "Drama": 31,
+                "Horror": 10,
+                "Mystery": 11,
+                "Comedy": 13,
+                "Crime": 12,
+                "Sci-Fi": 7,
+                "Biography": 4,
+                "History": 2,
+                "Romance": 2,
+                "War": 1,
+                "Sport": 1,
+                "Western": 3
+            },
+            "languages": {
+                "en": 50
+            }
+        },
+        "shows": {
+            "count": 50,
+            "avgPopularity": 46.89267999999997,
+            "avgScore": 7.466000000000004,
+            "avgRuntime": 47.3469387755102,
+            "ratingDistr": {
+                "TV-MA": 21,
+                "TV-14": 18,
+                "TV-PG": 11
+            },
+            "yearDistr": {
+                "1982": 1,
+                "1987": 1,
+                "1989": 1,
+                "1990": 2,
+                "1993": 3,
+                "1995": 1,
+                "1997": 1,
+                "1999": 2,
+                "2002": 1,
+                "2004": 2,
+                "2005": 2,
+                "2006": 2,
+                "2007": 2,
+                "2008": 2,
+                "2009": 1,
+                "2010": 3,
+                "2011": 4,
+                "2013": 2,
+                "2014": 2,
+                "2015": 4,
+                "2016": 1,
+                "2018": 5,
+                "2019": 5
+            },
+            "genres": {
+                "Drama": 43,
+                "Horror": 2,
+                "Thriller": 19,
+                "Action": 12,
+                "Comedy": 11,
+                "Crime": 21,
+                "Sci-Fi": 10,
+                "Fantasy": 4,
+                "Mystery": 17,
+                "Romance": 9,
+                "Adventure": 8,
+                "History": 3,
+                "War": 1,
+                "Family": 2,
+                "Short": 1,
+                "Western": 2,
+                "Sport": 1
+            },
+            "languages": {
+                "en": 49,
+                "es": 1
+            }
+        }
+    },
+    "hbo": {
+        "movies": {
+            "count": 10,
+            "avgPopularity": 26.881700000000002,
+            "avgScore": 6.609999999999999,
+            "avgRuntime": 124.2,
+            "ratingDistr": {
+                "PG-13": 6,
+                "R": 4
+            },
+            "yearDistr": {
+                "2011": 1,
+                "2018": 8,
+                "2019": 1
+            },
+            "genres": {
+                "Biography": 1,
+                "Drama": 4,
+                "Music": 2,
+                "Action": 3,
+                "Adventure": 4,
+                "Sci-Fi": 2,
+                "Comedy": 1,
+                "Fantasy": 3,
+                "Romance": 2,
+                "Thriller": 4,
+                "Family": 1,
+                "Crime": 2,
+                "Horror": 1,
+                "Mystery": 1
+            },
+            "languages": {
+                "en": 10
+            }
+        },
+        "shows": {
+            "count": 10,
+            "avgPopularity": 42.4763,
+            "avgScore": 7.7,
+            "avgRuntime": 49.9,
+            "ratingDistr": {
+                "TV-MA": 10
+            },
+            "yearDistr": {
+                "1999": 1,
+                "2002": 1,
+                "2011": 1,
+                "2014": 1,
+                "2015": 1,
+                "2016": 1,
+                "2017": 1,
+                "2018": 1,
+                "2019": 2
+            },
+            "genres": {
+                "Crime": 5,
+                "Drama": 9,
+                "Thriller": 2,
+                "Action": 2,
+                "Adventure": 1,
+                "Fantasy": 1,
+                "Romance": 1,
+                "Comedy": 3,
+                "Sport": 1,
+                "Mystery": 3,
+                "Sci-Fi": 1,
+                "Western": 1
+            },
+            "languages": {
+                "en": 10
+            }
+        }
+    },
     "netflix": {
         "movies": {
             "count": 50,
@@ -115,197 +306,6 @@
                 "es": 1,
                 "fr": 1,
                 "de": 2
-            }
-        }
-    },
-    "hbo": {
-        "movies": {
-            "count": 10,
-            "avgPopularity": 26.881700000000002,
-            "avgScore": 6.609999999999999,
-            "avgRuntime": 124.2,
-            "ratingDistr": {
-                "PG-13": 6,
-                "R": 4
-            },
-            "yearDistr": {
-                "2011": 1,
-                "2018": 8,
-                "2019": 1
-            },
-            "genres": {
-                "Biography": 1,
-                "Drama": 4,
-                "Music": 2,
-                "Action": 3,
-                "Adventure": 4,
-                "Sci-Fi": 2,
-                "Comedy": 1,
-                "Fantasy": 3,
-                "Romance": 2,
-                "Thriller": 4,
-                "Family": 1,
-                "Crime": 2,
-                "Horror": 1,
-                "Mystery": 1
-            },
-            "languages": {
-                "en": 10
-            }
-        },
-        "shows": {
-            "count": 10,
-            "avgPopularity": 42.4763,
-            "avgScore": 7.7,
-            "avgRuntime": 49.9,
-            "ratingDistr": {
-                "TV-MA": 10
-            },
-            "yearDistr": {
-                "1999": 1,
-                "2002": 1,
-                "2011": 1,
-                "2014": 1,
-                "2015": 1,
-                "2016": 1,
-                "2017": 1,
-                "2018": 1,
-                "2019": 2
-            },
-            "genres": {
-                "Crime": 5,
-                "Drama": 9,
-                "Thriller": 2,
-                "Action": 2,
-                "Adventure": 1,
-                "Fantasy": 1,
-                "Romance": 1,
-                "Comedy": 3,
-                "Sport": 1,
-                "Mystery": 3,
-                "Sci-Fi": 1,
-                "Western": 1
-            },
-            "languages": {
-                "en": 10
-            }
-        }
-    },
-    "amazon_prime": {
-        "movies": {
-            "count": 50,
-            "avgPopularity": 16.217519999999997,
-            "avgScore": 6.846,
-            "avgRuntime": 115.14,
-            "ratingDistr": {
-                "PG": 3,
-                "R": 37,
-                "PG-13": 8,
-                "Not Rated": 2
-            },
-            "yearDistr": {
-                "1957": 1,
-                "1968": 1,
-                "1976": 2,
-                "1980": 1,
-                "1982": 1,
-                "1984": 2,
-                "1988": 2,
-                "1989": 1,
-                "1990": 1,
-                "1991": 1,
-                "1995": 2,
-                "1997": 1,
-                "2000": 2,
-                "2001": 1,
-                "2002": 1,
-                "2010": 3,
-                "2015": 1,
-                "2016": 1,
-                "2017": 12,
-                "2018": 9,
-                "2019": 4
-            },
-            "genres": {
-                "Adventure": 9,
-                "Family": 1,
-                "Fantasy": 2,
-                "Action": 10,
-                "Thriller": 18,
-                "Drama": 31,
-                "Horror": 10,
-                "Mystery": 11,
-                "Comedy": 13,
-                "Crime": 12,
-                "Sci-Fi": 7,
-                "Biography": 4,
-                "History": 2,
-                "Romance": 2,
-                "War": 1,
-                "Sport": 1,
-                "Western": 3
-            },
-            "languages": {
-                "en": 50
-            }
-        },
-        "shows": {
-            "count": 50,
-            "avgPopularity": 46.89267999999997,
-            "avgScore": 7.466000000000004,
-            "avgRuntime": 47.3469387755102,
-            "ratingDistr": {
-                "TV-MA": 21,
-                "TV-14": 18,
-                "TV-PG": 11
-            },
-            "yearDistr": {
-                "1982": 1,
-                "1987": 1,
-                "1989": 1,
-                "1990": 2,
-                "1993": 3,
-                "1995": 1,
-                "1997": 1,
-                "1999": 2,
-                "2002": 1,
-                "2004": 2,
-                "2005": 2,
-                "2006": 2,
-                "2007": 2,
-                "2008": 2,
-                "2009": 1,
-                "2010": 3,
-                "2011": 4,
-                "2013": 2,
-                "2014": 2,
-                "2015": 4,
-                "2016": 1,
-                "2018": 5,
-                "2019": 5
-            },
-            "genres": {
-                "Drama": 43,
-                "Horror": 2,
-                "Thriller": 19,
-                "Action": 12,
-                "Comedy": 11,
-                "Crime": 21,
-                "Sci-Fi": 10,
-                "Fantasy": 4,
-                "Mystery": 17,
-                "Romance": 9,
-                "Adventure": 8,
-                "History": 3,
-                "War": 1,
-                "Family": 2,
-                "Short": 1,
-                "Western": 2,
-                "Sport": 1
-            },
-            "languages": {
-                "en": 49,
-                "es": 1
             }
         }
     }
