@@ -16,7 +16,7 @@ $("#child, #parental, #adult").click(function() {
 });
 
 $("#done").click(function() {
-    let recommendation = getStreamingProvider(
+    let recommendation = recommendPlatform(
         $("#type").val(),
         $("#duration").val(),
         popularity,
