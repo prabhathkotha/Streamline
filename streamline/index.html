@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 	<link rel="stylesheet" href="css/slider.css">
-	<script type="text/javascript" src="js/slider.js"></script>
+	<script src="https://kit.fontawesome.com/8edcd118e3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,14 +35,15 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section" id="survey">
 		<div class="container">
 			<h1 class="title">Movie vs Show</h1>
 			<div class="columns is-centered">
 				<div class="column is-half">
 					<h2 class="subtitle">
-						It's Saturday afternoon. Are you getting cozy for a <strong>feature film</strong> or
-						<strong>series episode(s)</strong>?
+						It's Saturday afternoon. Are you more likely to get cozy for a <strong>feature film</strong> or
+						a
+						<strong>show</strong>?
 					</h2>
 					<img src="img/movie.png" style="width:auto; height:3em;">
 					<label class="pure-material-slider">
@@ -52,9 +53,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<section class="section">
 		<div class="container">
 			<h1 class="title">Duration</h1>
 			<div class="columns is-centered">
@@ -71,9 +69,95 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<h1 class="title">Content Rating</h1>
+			<div class="columns is-centered">
+				<div class="column is-half">
+					<h2 class="subtitle">
+						Describe the family-friendliness of the movies and tv-shows you watch most often.
+					</h2>
+					<div class="buttons has-addons">
+						<button class="button is-success">
+							<span class="icon is-small">
+								<i class="fas fa-baby"></i>
+							</span>
+							<span>Child-Friendly</span>
+						</button>
+						<button class="button is-warning">
+							<span class="icon is-small">
+								<i class="fas fa-child"></i>
+							</span>
+							<span>Parental Guidence</span>
+						</button>
+						<button class="button is-danger">
+							<span class="icon is-small">
+								<i class="fas fa-exclamation"></i>
+							</span>
+							<span>Adult Only</span>
+						</button>
+					</div>
+				</div>
+			</div>
 	</section>
 
-	
+	<section class="section">
+		<div class="container">
+			<h1 class="title">Play Favorites</h1>
+			<div class="columns is-centered">
+				<div class="column is-half">
+					<h2 class="subtitle">
+						Which of the following movies do you find the most interesting?
+					</h2>
+				</div>
+			</div>
+			<div class="columns ">
+				<div class="column">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="img/creed.jpg">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								INSERT CREED DESCRIPTION HERE.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="img/blade_runner.jpg">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								INSERT BLADE RUNNER DESCRIPTION HERE.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="img/joker.jpg">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								INSERT JOKER DESCRIPTION HERE.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		</div>
+	</section>
 </body>
 
 </html>
