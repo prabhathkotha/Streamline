@@ -28,7 +28,7 @@ $("#done").one("click", function () {
         // recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']};
 
         //display recommended streaming platform
-        $('.suggestion-platform').text(recommendation.platform);
+        $('.suggestion-platform').text(recommendation.platform.charAt(0).toUpperCase() + recommendation.platform.slice(1));
 
         //display movies based on imdb ids in recommendation
         recommendation.suggestions.forEach(function (imdb_id, i) {
