@@ -5,28 +5,28 @@ $("#start").click(function () {
     },'slow');
 });
 
-let popularity = "";
+let popularity = "NA";
 $("#blockbuster, #niche").click(function() {
      popularity = $(this).attr("id");
 });
 
-let rating = "";
+let rating = "NA";
 $("#child, #parental, #adult").click(function() {
     rating = $(this).attr("id");
 });
 
-$("#done").click(function() {
-    let recommendation = recommendPlatform(
-        $("#type").val(),
-        $("#duration").val(),
-        popularity,
-        $("#decade").val(),
-        rating
-    );
-
+$("#done").one("click", function() {
+    const user_input = {
+        type: $("#type").val(),
+        duration: $("#duration").val(),
+        popularity: popularity,
+        decade: $("#decade").val(),
+        rating: rating
+    };
+    recommendPlatform(user_input).then(recommendation => {
     //debug ~~~
-    recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']};
-    
+    // const recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']};
+
     //display recommended streaming platform
     $('.suggestion-platform').text(recommendation.platform);
 
@@ -43,4 +43,14 @@ $("#done").click(function() {
     $('html,body').animate({
         scrollTop: $("#suggestions").offset().top
     },'slow');
+
+    //reporting analytic data
+    //acceptUserInput(...Object.values(user_input));
+    user_input.id = $.get('https://api.ipify.org/')
+    console.log(user_input)
+    $.post(
+        'https://api.airtable.com/v0/appk6FaokTBZoh6nP/main?api_key=keyIuAjkkDzAM4OyC',
+        {"fields": user_input}
+    );
+});
 });
