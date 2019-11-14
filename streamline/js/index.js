@@ -23,7 +23,7 @@ $("#done").one("click", function () {
         decade: $("#decade").val(),
         rating: rating
     };
-    recommendPlatform(user_input).then(recommendation => {
+    recommendPlatform(...Object.values(user_input)).then(recommendation => {
         //debug ~~~
         // recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']};
 
@@ -45,8 +45,6 @@ $("#done").one("click", function () {
         }, 'slow');
 
         //reporting analytic data
-        //acceptUserInput(...Object.values(user_input));
-        user_input.id = $.get('https://api.ipify.org/')
         console.log(user_input)
         $.post(
             'https://api.airtable.com/v0/appk6FaokTBZoh6nP/main?api_key=keyIuAjkkDzAM4OyC',
