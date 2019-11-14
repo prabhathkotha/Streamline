@@ -1,10 +1,3 @@
-const getStreamingProvider = function(type, duration, popularity, decade, rating) {
-    //TODO
-    // do some magic here
-    // return streaming provider and three imdb ids to display
-        // { platform: 'netflix', suggestions: ['imdbid_a', 'imdbid_b', 'imdbid_c'] }
-}
-
 $("#start").click(function () {
     $("#survey").css("display", "block");
     $('html,body').animate({
@@ -31,8 +24,8 @@ $("#done").click(function() {
         rating
     );
 
-
-    recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']}; // d e b u g 
+    //debug ~~~
+    recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']};
     
     //display recommended streaming platform
     $('.suggestion-platform').text(recommendation.platform);
