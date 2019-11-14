@@ -1,5 +1,4 @@
 ## unc-case-comp-2019
-***
 # Streamline
 
 This project offers a webapp to help users navigate the decision to buy into a streaming service. 
