@@ -200,7 +200,7 @@ export async function requestMovieData() {
     }
 };
 requestMovieData().then(() => {
-    fs.writeFile("./reportCards.json", JSON.stringify(reportCards, null, 4), (err) => {
+    fs.writeFile("reportCards.json", JSON.stringify(reportCards, null, 4), (err) => {
         if (err) {
             console.error(err);
             return;
