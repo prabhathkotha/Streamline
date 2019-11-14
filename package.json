@@ -5,7 +5,7 @@
   "main": "streamline/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "report_card": "node -r esm src/report_card.js"
+    "report_card": "node -r esm report_card/report_card.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/RedVentures22/unc-tech-case-competition-2019-streamline#readme",
   "dependencies": {
     "axios": "^0.19.0",
+    "esm": "^3.2.25",
+    "fs": "0.0.1-security",
     "jquery": "^3.4.1"
   }
 }
