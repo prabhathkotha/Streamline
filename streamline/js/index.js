@@ -2,7 +2,7 @@ const getStreamingProvider = function(type, duration, popularity, decade, rating
     //TODO
     // do some magic here
     // return streaming provider and three imdb ids to display
-        // { provider: 'netflix', suggestions: ['imdbid_a', 'imdbid_b', 'imdbid_c'] }
+        // { platform: 'netflix', suggestions: ['imdbid_a', 'imdbid_b', 'imdbid_c'] }
 }
 
 $("#start").click(function () {
@@ -22,7 +22,6 @@ $("#child, #parental, #adult").click(function() {
     rating = $(this).attr("id");
 });
 
-let stream_service = "";
 $("#done").click(function() {
     let recommendation = getStreamingProvider(
         $("#type").val(),
@@ -32,15 +31,19 @@ $("#done").click(function() {
         rating
     );
 
-    //display movies based on imdb ids in recommendation
-    recommendation.forEach(function(imdb_id, i) {
-        let image_url = null;//TODO get url using omdb and imdb_id
-        let image_desc = null;//TODO get desc using omdb and imdb_id
-        $(`#suggestion-${i+1}-pic`).attr("src", image_url);
-        $(`#suggestion-${i+1}-desc`).text("src", image_desc);
-    });
+
+    recommendation = {platform: 'Netflix', suggestions: ['tt0110912', 'tt4633694', 'tt9243946']}; // d e b u g 
     
-    stream_service = recommendation.provider;
+    //display recommended streaming platform
+    $('.suggestion-platform').text(recommendation.platform);
+
+    //display movies based on imdb ids in recommendation
+    recommendation.suggestions.forEach(function(imdb_id, i) {
+        $.get(`http://www.omdbapi.com/?apikey=c6f70b0d&i=${imdb_id}`, function(data) {
+            $(`#suggestion-${i+1}-pic`).attr("src", data.Poster);
+            $(`#suggestion-${i+1}-desc`).text(data.Plot);
+        });
+    });
 
     //display and scroll
     $("#suggestions").css("display", "block");
@@ -48,5 +51,3 @@ $("#done").click(function() {
         scrollTop: $("#suggestions").offset().top
     },'slow');
 });
-
-// After user selects a movie, display service
