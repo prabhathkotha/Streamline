@@ -5,7 +5,7 @@
   "main": "streamline/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "report_card": "node -r esm report_card/report_card.js"
+    "report_card": "node -r esm report_card/generate_report_card.js"
   },
   "repository": {
     "type": "git",
